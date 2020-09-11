@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+<div id="wrapper">
+<nav class="navbar navbar-expand-lg navbar-light bg-ligh">
+
+  <a class="navbar-brand  text-primary" href="index.html"><img src="static\images\alien_ufo.png" width="30" height="30" alt="ufo_image" loading="lazy">UFO Sightings</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Filter
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="index.html">Date Filter</a>
+          <a class="dropdown-item" href="detail.html">Detailed Filter</a>
+
+      </li>
+    
+    </ul>
+    
+  </div>
+</nav>
+
+    <div class="hero text-center">
+      <h3>UFO Sightings</h3>
+      <p>The Truth is Out There</p>
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Detailed Filter Search</div>
+              <div class="panel-body">
+                <form id ="form">
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      
+                      <li class="filter list-group-item">
+                        <label for="date">Date:</label>
+                        <input class="form-control" id="datetime" type="text" placeholder="1/1/2010">
+                      </li>
+                      
+                        <li class="filter list-group-item">
+                        <label for="city">City:</label>
+                        <input class="form-control" id="city" type="text" placeholder="benton">
+                      </li>
+                      
+                        <li class="filter list-group-item">
+                        <label for="state">State:</label>
+                        <input class="form-control" id="state" type="text" placeholder="ca">
+                      </li>
+                      
+                      <li class="filter list-group-item">
+                        <label for="country">Country:</label>
+                        <select class="form-control" id="country" type="text">
+                        <option value=""></option>
+                        <option value="us">us</option>
+                        <option value="ca">ca</option>
+                        </select>
+                      </li>
+
+                        <li class="filter list-group-item">
+                        <label for="shape">Shape:</label>
+                        <input class="form-control" id="shape" type="text" placeholder="triangle">
+                      </li>
+
+
+
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-secondary">Apply Filter</button>
+                  <br>
+                  <button id="clear-btn" type="button" class="btn btn-secondary">Clear Filter</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="ufo-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">Country</th>
+                  <th class="table-head">Shape</th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</main>
+<footer class="footer">
+<p>Created by Kenjiro,  September 2020</p>
+</footer>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app2.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
